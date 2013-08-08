@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<head>
+<title>Sift&Sort</title>
+<link href='style.css' rel='stylesheet'>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src='js/tablesort.min.js'></script>
+<script src="js/jquery.sieve.js"></script>
+<script src="js/jquery.foundation.reveal.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+  		$("table.sieve").sieve();
+	});
+</script>
+</head>
+
+<body>
+	<h2>Sift &amp; Sort</h2>
+    <a class="acronym-btn" href="#" data-reveal-id="addAcronym">Add Acronym</a>
+    <div id="acronyms">
+	<table id="sorterer" class="sieve sort">
+    	<thead>
+        	<tr>
+            	<th>Acronym</th>
+                <th class="no-sort">Meaning</th>
+                <th>Industry</th>
+                <th class="no-sort" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+        	<tr>
+            	<td class="id" style="display:none;">1</td>
+            	<td class="acronym">RITE</td>
+                <td class="meaning">Rapid Iterative Testing and Evaluation</td>
+                <td class="system">Usability</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">2</td>
+            	<td class="acronym">RUP</td>
+                <td class="meaning">Rational Unified Process</td>
+                <td class="system">Software Development</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">3</td>
+            	<td class="acronym">SOA</td>
+                <td class="meaning">Service Oriented Architecture</td>
+                <td class="system">Software Development</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">4</td>
+            	<td class="acronym">SoLoMo</td>
+                <td class="meaning">Social Local Mobile</td>
+                <td class="system">Startups</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">5</td>
+            	<td class="acronym">SLA</td>
+                <td class="meaning">Service Level Agreement</td>
+                <td class="system">Information Technology</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">6</td>
+            	<td class="acronym">LAMP</td>
+                <td class="meaning">Linux Apache MySQL PHP</td>
+                <td class="system">Programming</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">7</td>
+            	<td class="acronym">OOP</td>
+                <td class="meaning">Object-Oriented Programming</td>
+                <td class="system">Programming</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">8</td>
+            	<td class="acronym">DRY</td>
+                <td class="meaning">Don't Repeat Yourself</td>
+                <td class="system">Programming</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">9</td>
+            	<td class="acronym">SDLC</td>
+                <td class="meaning">Software Development Life Cycle</td>
+                <td class="system">Information Technology</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</a></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+            <tr>
+            	<td class="id" style="display:none;">10</td>
+            	<td class="acronym">UCD</td>
+                <td class="meaning">User-Centered Design</td>
+                <td class="system">Usability</td>
+                <td class="edit"><a class="edit-item-btn" data-reveal-id="addAcronym">Edit</button></td>
+                <td class="remove"><a class="remove-item-btn">Remove</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+					<!-- Add Modal Start-->
+    				<div id="addAcronym" class="reveal-modal">
+    					<table id="addacro">
+         					<td class="acronym">
+                                <input type="hidden" id="id-field" />
+                                <label>Acronym</label>
+                                <input type="text" id="acronym-field" placeholder="Acronym" />
+                            </td>
+                            <td class="meaning">
+                            	<label>Meaning</label>
+                                <input type="text" id="meaning-field" placeholder="Meaning" />
+                            </td>
+                            <td class="system">
+                            	<label>System</label>
+                                <input type="text" id="system-field" placeholder="System" />
+                            </td>
+                        </table>
+                        <div class="add">
+                                <button class="add-modal-close" id="add-btn">Add</button>
+                                <button class="add-modal-close" id="save-btn">Save</button>
+                         </div>
+                       <a class="add-modal-close close-btn-reveal">&#215;</a>
+					</div>
+                        
+                        
+<script>
+  new Tablesort(document.getElementById('sorterer'));
+</script>
+
+<script src="js/list.js"></script>
+<script type="text/javascript">
+
+        /*
+        * Acronyms LIST
+        */
+
+        // Define acronyms
+        var options = {
+    	    valueNames: [ 'id', 'acronym', 'meaning', 'system' ]
+        };
+
+        // Init list
+        var acronymList = new List('acronyms', options);
+
+        var idField = $('#id-field'),
+            acronymField = $('#acronym-field'),
+            meaningField = $('#meaning-field'),
+            systemField = $('#system-field'),
+            addBtn = $('#add-btn'),
+            saveBtn = $('#save-btn').hide(),
+            removeBtns = $('.remove-item-btn'),
+            editBtns = $('.edit-item-btn');
+
+        // Sets callbacks to the buttons in the list
+        refreshCallbacks();
+
+        addBtn.click(function() {
+           acronymList.add({
+               id: Math.floor(Math.random()*110000),
+               acronym: acronymField.val(),
+               meaning: meaningField.val(),
+               system: systemField.val()
+           });
+           clearFields();
+           refreshCallbacks();
+        });
+
+        saveBtn.click(function() {
+           var item = acronymList.get('id', idField.val());
+           item.values({
+               id:idField.val(),
+               acronym: acronymField.val(),
+               meaning: meaningField.val(),
+               system: systemField.val()
+           });
+           clearFields();
+           saveBtn.hide();
+           addBtn.show();
+        });
+
+        function refreshCallbacks() {
+            // Needed to add new buttons to jQuery-extended object
+            removeBtns = $(removeBtns.selector);
+            editBtns = $(editBtns.selector);
+
+            removeBtns.click(function() {
+               var itemId = $(this).closest('tr').find('.id').text();
+               acronymList.remove('id', itemId);
+            });
+
+            editBtns.click(function() {
+               var itemId = $(this).closest('tr').find('.id').text();
+               var itemValues = acronymList.get('id', itemId).values();
+               idField.val(itemValues.id);
+               acronymField.val(itemValues.acronym);
+               meaningField.val(itemValues.meaning);
+               systemField.val(itemValues.system);
+               saveBtn.show();
+               addBtn.hide();
+            });
+        }
+
+        function clearFields() {
+           acronymField.val('');
+           meaningField.val('');
+           systemField.val('');
+        }
+    </script>
+    <!-- End of List.js stuff -->
+</body>
+</html>
