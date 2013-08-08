@@ -27,8 +27,8 @@ If you have feedback or issues with what I have specifically put together, pleas
 #### License:
 Sift&amp;Sort is [MIT-licensed][5] and absolutely free to use. Sift&amp;Sort wouldn't be possible without the support and brilliance of the other projects listed above (sincere thanks).
 
-[1] : https://github.com/rmm5t/jquery-sieve "jquery-sieve"
-[2] : https://github.com/tristen/tablesort "tablesort"
-[3] : https://github.com/javve/list "List.js"
-[4] : https://github.com/zurb/reveal "Zurb Reveal"
-[5] : http://opensource.org/licenses/mit-license.php "MIT License"
+[1]: https://github.com/rmm5t/jquery-sieve "jquery-sieve"
+[2]: https://github.com/tristen/tablesort "tablesort"
+[3]: https://github.com/javve/list "List.js"
+[4]: https://github.com/zurb/reveal "Zurb Reveal"
+[5]: http://opensource.org/licenses/mit-license.php "MIT License"
